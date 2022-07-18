@@ -45,17 +45,13 @@ public class PrinterHelper
         boolean wrongFormat = true;
         while(wrongFormat){
             try{
-//                System.out.println("Enter date in mm/dd/yyyy ");
                 birthDate = formatter.parse(scanner.next());
                 wrongFormat = false;
             } catch(Exception e){
-                System.out.println("Invalid information \n Please enter correct date of birth"+"format mm/dd/yyyy");
+                System.out.println("Please enter correct date of birth");
             }
         }
 
-
-
-//        Date birthDate = formatter.parse( scanner.next());
         System.out.println( "|-------------------------------------|" );
         Student student = new Student( id, name, email, birthDate );
         System.out.println( "Student Successfully Registered! " );
