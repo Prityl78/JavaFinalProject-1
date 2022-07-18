@@ -40,6 +40,7 @@ public class PrinterHelper
         System.out.println( "| Enter student birth date(mm/dd/yyyy)|" );
         DateFormat formatter = new SimpleDateFormat( "mm/dd/yyyy");
         //TODO validate date format and catch exception to avoid crash
+//        Date birthDate = formatter.parse( scanner.next());
 
         Date birthDate = null;
         boolean wrongFormat = true;
@@ -48,7 +49,7 @@ public class PrinterHelper
                 birthDate = formatter.parse(scanner.next());
                 wrongFormat = false;
             } catch(Exception e){
-                System.out.println("Please enter correct date of birth");
+                System.out.println("Please enter correct date of birth format");
             }
         }
 
